@@ -2,7 +2,6 @@
 
 window.addEventListener('load', () => {
   $('#source-image').attr('src', '#');
-  $('#analysis-results').text('');
 
   //Add your endpoint i.e. "https://<YOUR_APP>.cognitiveservices.azure.com/"
   const ENDPOINT_URL = '';
@@ -20,6 +19,7 @@ window.addEventListener('load', () => {
 
   submitButton.addEventListener('click', event => {
     event.preventDefault();
+    $('#analysis-results').text('');
     const sourceImageUrl = $('#image-input').val();
     $('#source-image').attr('src', sourceImageUrl);
     sendImg(sourceImageUrl);
@@ -49,12 +49,9 @@ window.addEventListener('load', () => {
   const analyzeResponse = data => {
     const imageTags = data.description.tags;
     const tagsToCheck = ['person', 'people', 'man', 'woman', 'child', 'boy', 'girl'];
-    let result = 'No person found!';
-    tagsToCheck.forEach(tag => {
-      if (imageTags.includes(tag)) {
-        result = 'Image contains a person!';
-      }
-    });
-    return result;
+    for (let i = 0; i < tagsToCheck.length; i++) {
+      if (imageTags.includes(tagsToCheck[i])) return 'Images contains a person!';
+    };
+    return 'No person found!';
   };
 })
