@@ -1,0 +1,14 @@
+{
+  "name": "walgreens-image-app-node",
+  "version": "1.0.0",
+  "description": "Image App for Tech Test",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Tim Lantz",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

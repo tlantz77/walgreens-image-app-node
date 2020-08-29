@@ -1,0 +1,12 @@
+#image-input {
+  width: 600px;
+}
+
+#source-image {
+  margin: 10px;
+  max-height: 600px;
+  max-width: 600px;
+  min-height: 60px;
+  min-width: 60px;
+  border: 1px dashed;
+}
