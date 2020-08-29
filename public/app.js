@@ -50,7 +50,7 @@ window.addEventListener('load', () => {
     const imageTags = data.description.tags;
     const tagsToCheck = ['person', 'people', 'man', 'woman', 'child', 'boy', 'girl'];
     for (let i = 0; i < tagsToCheck.length; i++) {
-      if (imageTags.includes(tagsToCheck[i])) return 'Images contains a person!';
+      if (imageTags.includes(tagsToCheck[i])) return 'Image contains a person!';
     };
     return 'No person found!';
   };
